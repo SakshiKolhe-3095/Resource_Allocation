@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Selection - Knapsack</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <h1><u>Project Selection</u></h1>
+        <p>Optimize your project selection using 0/1 Knapsack</p>
+    </div>
+    <div class="container">
+      <div class="card">
+        <div class="bulb-container">
+          <div class="bulb-icon">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h2>Set Project Capacity</h2>
+        </div>
+        <input type="number" id="capacity" placeholder="Enter total capacity">
+        <button id="setCapacity">Set Capacity</button>
+        <p>Current Capacity: <span id="currentCapacity">0</span></p>
+      </div>
+
+<!-- Add Project Card -->
+<div class="card">
+  <div class="bulb-container">
+    <div class="bulb-icon">
+      <i class="fas fa-lightbulb"></i>
+    </div>
+    <h2>Add Project</h2>
+  </div>
+  <input type="text" id="projectName" placeholder="Project Name">
+  <input type="number" id="projectValue" placeholder="Value">
+  <input type="number" id="projectWeight" placeholder="Weight">
+  <button id="addProject">Add Project</button>
+</div>
+
+<!-- Project List Card -->
+<div class="card">
+  <div class="bulb-container">
+    <div class="bulb-icon">
+      <i class="fas fa-lightbulb"></i>
+    </div>
+    <h2>Project List</h2>
+  </div>
+  <table id="projectList">
+    <thead>
+      <tr>
+        <th>Project</th>
+        <th>Value</th>
+        <th>Weight</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<!-- Optimized Selection Card -->
+<div class="card">
+  <div class="bulb-container">
+    <div class="bulb-icon">
+      <i class="fas fa-lightbulb"></i>
+    </div>
+    <h2>Optimized Selection</h2>
+  </div>
+  <button id="optimizeSelection">Optimize</button>
+  <p>Optimized Value: <span id="optimizedValue">0</span></p>
+  <p>Selected Projects: <span id="selectedProjects"></span></p>
+</div>
+<div class="card">
+  <div class="bulb-container">
+    <div class="bulb-icon">
+      <i class="fas fa-lightbulb"></i>
+    </div>
+    <h2>Bar Chart</h2>
+  </div>
+  <div id="barChartContainer">
+    <canvas id="barChart" width="200" height="200"></canvas>
+  </div>
+</div>
+
+<div class="card">
+  <div class="bulb-container">
+    <div class="bulb-icon">
+      <i class="fas fa-lightbulb"></i>
+    </div>
+    <h2>Pie Chart</h2>
+  </div>
+  <div id="pieChartContainer">
+    <canvas id="pieChart" width="400" height="200"></canvas>
+  </div>
+</div>
+
+
+        </div>
+    </div>
+</body>
+</html>
